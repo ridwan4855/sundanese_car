@@ -6,6 +6,7 @@ export const listCars = [
     countSell: "3",
     from: "Japan",
     linkImage: "/icon/car-logo1.png",
+    description: "",
     varianColor: [
       { blue: "#0000FF" },
       { green: "#00A36C" },
@@ -20,6 +21,7 @@ export const listCars = [
     countSell: "5",
     from: "Japan",
     linkImage: "/icon/car-logo2.png",
+    description: "",
     varianColor: [
       { blue: "#0000FF" },
       { green: "#00A36C" },
@@ -34,6 +36,7 @@ export const listCars = [
     countSell: "240",
     from: "Japan",
     linkImage: "/icon/car-logo3.png",
+    description: "",
     varianColor: [
       { blue: "#0000FF" },
       { green: "#00A36C" },
@@ -48,6 +51,7 @@ export const listCars = [
     countSell: "230",
     from: "Japan",
     linkImage: "/icon/car-logo4.png",
+    description: "",
     varianColor: [
       { blue: "#0000FF" },
       { green: "#00A36C" },
@@ -62,6 +66,7 @@ export const listCars = [
     countSell: "80",
     from: "Japan",
     linkImage: "/icon/car-logo5.png",
+    description: "",
     varianColor: [
       { blue: "#0000FF" },
       { green: "#00A36C" },
@@ -76,6 +81,7 @@ export const listCars = [
     countSell: "120",
     from: "Japan",
     linkImage: "/icon/car-logo6.png",
+    description: "",
     varianColor: [
       { blue: "#0000FF" },
       { green: "#00A36C" },
@@ -90,6 +96,7 @@ export const listCars = [
     countSell: "23",
     from: "Japan",
     linkImage: "/icon/car-logo7.png",
+    description: "",
     varianColor: [
       { blue: "#0000FF" },
       { green: "#00A36C" },
@@ -104,6 +111,7 @@ export const listCars = [
     countSell: "20",
     from: "Japan",
     linkImage: "/icon/car-logo8.png",
+    description: "",
     varianColor: [
       { blue: "#0000FF" },
       { green: "#00A36C" },
