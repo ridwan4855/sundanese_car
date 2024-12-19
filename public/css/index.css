@@ -1,0 +1,7 @@
+.scrollable-container {
+  scrollable-width: none;
+  -ms-overflow-style: none;
+}
+.scrollable-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Edge */
+}

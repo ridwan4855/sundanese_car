@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #c4dee2;
+  --foreground: #222425;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #101010;
+    --foreground: #f6fbfc;
   }
 }
 
@@ -18,4 +18,35 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.imgClass {
+  color: var(--foreground);
+}
+
+.g8 {
+  background: linear-gradient(to right, transparent, #2ef2ff, transparent);
+}
+
+.download_tech-link_last-before {
+  @apply last:relative last:before:pointer-events-none last:before:absolute last:before:left-full last:before:top-[calc(50%-1px)] last:before:mr-6 last:before:h-0.5 last:before:w-[250px] last:before:bg-[#263466] last:before:content-[''] last:before:max-xl:w-[250px] last:before:max-lg:w-[250px] last:before:max-md:hidden last:before:z-0;
+}
+.download_tech-link_last-after {
+  @apply last:after:pointer-events-none last:after:absolute last:after:left-[560px] last:after:top-[calc(50%-5px)] last:after:z-0 last:after:size-2.5 last:after:rounded-md last:after:border-2 last:after:border-[#263466] last:after:bg-[#080d27] last:after:content-[''] last:after:max-xl:left-[316px] last:after:max-lg:left-[316px] last:after:max-md:hidden;
+}
+
+.download_preview-before {
+  @apply before:bg-gradient-to-r before:from-transparent before:via-[#2ef2ff] before:to-transparent before:absolute before:-top-0.5 before:right-6 before:h-0.5 before:w-[63.2%] before:opacity-40 before:content-[''];
+}
+
+.download_preview-after {
+  @apply after:bg-gradient-to-r after:from-transparent after:via-[#2ef2ff] after:to-transparent after:absolute after:-bottom-0.5 after:left-6 after:h-0.5 after:w-[42.2%] after:opacity-40 after:content-[''];
+}
+
+.container {
+  @apply mx-auto max-w-[1252px] px-16 max-xl:px-10 max-lg:px-6 max-sm:px-4;
+}
+
+.download_tech-link:hover .download_tech-icon svg path {
+  @apply fill-[#2EF2FF];
 }
