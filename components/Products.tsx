@@ -43,9 +43,9 @@ export const Products = () => {
       {/* Header Section */}
 
       <div className="container relative h-[80px] flex justify-center items-center">
-        <div className="absolute -top-[60%] right-0 bg-gray-100 rounded-3xl px-8 py-4 z-20">
+        <div className="absolute -top-[60%] right-0 max-md:left-1/2 transform max-md:-translate-x-1/2 bg-gray-100 rounded-3xl px-8 py-4 z-20">
           <h2
-            className={`text-center text-[45px] max-lg:text-[36px] font-bold tracking-widest text-[rgb(36,36,36)] ${play_fair.className}`}
+            className={`text-center text-[45px] max-lg:text-[30px] font-bold tracking-widest text-[rgb(36,36,36)] ${play_fair.className}`}
           >
             OUR PRODUCT
           </h2>

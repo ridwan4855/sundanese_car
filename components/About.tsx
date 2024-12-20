@@ -17,7 +17,7 @@ export const About = () => {
 
       {/* Title */}
       <h1
-        className={`text-center text-[50px] max-lg:text-[36px] text-[rgb(16,16,16)] tracking-widest font-extrabold ${play_fair.className} mb-[40px]`}
+        className={`text-center text-[50px] max-lg:text-[30px] text-[rgb(16,16,16)] tracking-widest font-extrabold ${play_fair.className} mb-[40px]`}
       >
         ABOUT US
       </h1>
