@@ -5,6 +5,7 @@ import { Element } from "react-scroll";
 import { listCars, whyUsList } from "@/utils";
 import Image from "next/image";
 import { play_fair } from "@/public/font";
+import clsx from "clsx";
 
 export const Products = () => {
   const isCarsEmpty =
@@ -38,58 +39,60 @@ export const Products = () => {
   return (
     <Element
       name="Our Product"
-      className="relative w-full bg-gradient-to-b from-gray-100 via-gray-200 to-white shadow-lg pb-[80px]"
+      className="relative w-full bg-gradient-to-b pb-[80px] pt-[80px]"
     >
-      {/* Header Section */}
-
-      <div className="container relative h-[80px] flex justify-center items-center">
-        <div className="absolute -top-[60%] right-0 max-md:left-1/2 transform max-md:-translate-x-1/2 bg-gray-100 rounded-3xl px-8 py-4 z-20">
-          <h2
-            className={`text-center text-[45px] max-lg:text-[30px] font-bold tracking-widest text-[rgb(36,36,36)] ${play_fair.className}`}
-          >
-            OUR PRODUCT
-          </h2>
-        </div>
-      </div>
-
       {/* Primary Product List Section */}
-      {!isCarsEmpty ? (
-        <div className="container mx-auto p-8">
-          <div className="flex overflow-x-auto space-x-4 py-4 scrollable-container">
-            {listCars?.slice(0, 5).map((elm) => (
+      <div className="container flex items-center mx-auto">
+        <div className="flex-[0_0_300px] h-[100px] ">
+          <h1 className="lg:text-[40px]">Our Best</h1>
+          <h1 className="lg:text-[40px]">Selling</h1>
+        </div>
+        {!isCarsEmpty ? (
+          <div className=" p-8 relative w-[100vh]">
+            {/* shadow */}
+            <div
+              className={clsx(
+                "relative before:absolute before:bg-gradient-to-r before:left-0 before:top-0 before:h-[100%] before:w-[30px] before:from-[rgb(14,15,17)] before:to-transparent before:content-[''] before:pointer-events-none before:z-30",
+                "after:absolute after:bg-gradient-to-l after:right-0 after:top-0 after:h-[100%] after:w-[30px] after:from-[rgb(14,15,17)] after:to-transparent after:content-[''] after:pointer-events-none after:z-30"
+              )}
+            >
               <div
-                key={elm.merk}
-                className="bg-white flex-none w-[300px] rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-300 p-4 relative overflow-hidden"
+                className={clsx(
+                  "flex overflow-x-auto space-x-4 py-4 scrollable-container "
+                )}
               >
-                <div className="absolute top-0 left-0 bg-gradient-to-r  from-yellow-300 to-red-500 text-white px-2 py-1 text-xs font-semibold rounded-br-lg">
-                  Best Seller
-                </div>
-                <div className="relative w-full h-[200px]">
-                  <Image
-                    alt={elm.merk}
-                    width={300}
-                    height={200}
-                    src={elm.linkImage}
-                    className="rounded-lg object-cover w-full h-full"
-                  />
-                </div>
-                <div className="flex justify-between items-center mt-4">
-                  <div className="text-gray-800 font-medium text-lg">
-                    {elm.merk}
+                {listCars?.slice(0, 5).map((elm) => (
+                  <div
+                    key={elm.merk}
+                    className="bg-[rgb(26,27,30)] flex-none w-[300px] rounded-xl shadow-md hover:shadow-xl transition-shadow border border-[rgb(26,27,30)] p-4 relative overflow-hidden"
+                  >
+                    <div className="relative w-full h-[200px]">
+                      <Image
+                        alt={elm.merk}
+                        width={300}
+                        height={200}
+                        src={elm.linkImage}
+                        className="rounded-lg object-cover w-full h-full"
+                      />
+                    </div>
+                    {/* <div className="flex flex-col justify-between items-center mt-4"> */}
+                    <div className=" font-medium text-lg">{elm.merk}</div>
+                    <p className="text-[rgb(160,166,172)] text-sm">
+                      {elm.description ||
+                        "High-performance and reliable car for all occasions."}
+                    </p>
+                    {/* </div> */}
                   </div>
-                  <div className="p-2 bg-red-300 rounded-lg text-white shadow-md hover:bg-red-500 transition">
-                    <i className="fas fa-arrow-right"></i>
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      ) : (
-        <div className="container text-center text-gray-700 text-2xl py-20">
-          No Data Found
-        </div>
-      )}
+        ) : (
+          <div className="container text-center text-gray-700 text-2xl py-20">
+            No Data Found
+          </div>
+        )}
+      </div>
 
       {/* Additional Product List Without Overflow Hidden */}
       <div className="bg-[rgb(16,16,16)] w-full bg-gradient-to-br from-[rgb(38,74,60)] to-[rgb(77,128,108)]">
