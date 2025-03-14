@@ -87,7 +87,9 @@ export const Home = () => {
             to="Our Product"
             offset={-100}
             className="cursor-pointer
-             mt-6 px-8 py-3 text-lg text-black bg-gradient-to-r from-[#f79d65] to-[#f64f59] hover:from-[#f64f59] hover:to-[#f79d65] font-semibold rounded-lg shadow-lg transition-all duration-300"
+             mt-6 px-8 py-3 text-lg text-white 
+             bg-gradient-to-r from-transparent to-[rgba(48,55,78,0.6)] hover:from-[rgba(48,55,78,0.6)] hover:to-[rgba(41,41,41,0.6)] 
+             font-semibold rounded-3xl shadow-lg transition-all duration-1000 border border-white"
           >
             Explore Now
           </NavLink>

@@ -5,6 +5,8 @@ import React from "react";
 import { Link as NavLink } from "react-scroll";
 import { useState, useEffect, useRef } from "react";
 import { NavComponent } from "../components/NavComponent";
+import { redirect } from "next/navigation";
+// import { redirect } from "next/dist/server/api-utils";
 
 function HeaderPart() {
   const [isOpen, setIsOpen] = useState(false);
@@ -173,6 +175,17 @@ function HeaderPart() {
           </li>
           <li className="">
             <NavList title="Our Product" />
+          </li>
+          <li className="">
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              redirect('/login');
+
+            }}
+          >
+            Login
+          </div>
           </li>
         </ul>
       </div>

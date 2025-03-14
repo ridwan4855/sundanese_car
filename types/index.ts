@@ -10,3 +10,8 @@ export interface NavCompProps {
   handleClick?: MouseEventHandler<HTMLElement>;
   isScroll?: boolean;
 }
+
+export interface Login{
+  username:string;
+  password:string;
+}
