@@ -8,7 +8,7 @@ export const About = () => {
   return (
     <Element
       name="About Us"
-      className="relative bg-gradient-to-b from-[#ffffff] via-[#f0f4f8] to-[#e0e0e0] pt-[100px] pb-[100px] overflow-hidden"
+      className="relative bg-gradient-to-b from-[#ffffff] via-[#f0f4f8] to-[#e0e0e0] pt-[100px] pb-[100px]"
     >
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-gradient-to-tr from-[#2ef2ff] to-[#2d9bf0] opacity-30 rounded-full blur-2xl -z-10"></div>
@@ -89,6 +89,26 @@ export const About = () => {
 
           {/* Decorative Icon */}
           <div className="absolute bottom-[-50px] right-[20px] w-[120px] h-[120px] bg-gradient-to-tl from-[#f79d65] to-[#f64f59] opacity-50 rounded-full blur-lg"></div>
+        </div>
+      </div>
+
+      <div className="absolute top-0 right-0 h-full z-20">
+        <div className="relative h-full flex justify-center items-center">
+          <div className="sticky bottom-6 right-6 rounded-full bg-slate-400 flex self-end m-3 p-3 z-30">
+            <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex items-center justify-center relative">
+              <Image 
+                alt="Centered Image"
+                src="/icon/right-car.jpg"
+                width={1920}
+                height={1080}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex flex-col">
+              <h1 className="font-semibold">Sundanese Contact</h1>
+              <p>089929293912</p>
+            </div>
+          </div>
         </div>
       </div>
     </Element>

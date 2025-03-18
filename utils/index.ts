@@ -220,6 +220,7 @@ export const whyUsList = [
       "Our products are made from the finest materials, ensuring durability and performance.",
     style:
       "bg-indigo-500 hover:bg-indigo-600 text-white hover:w-[80px] hover:h-[80px] transition-all duration-500",
+    link:"/icon/whyus/guarantee.png"
   },
   {
     id: 2,
@@ -228,6 +229,7 @@ export const whyUsList = [
       "We focus on cutting-edge designs that are both functional and stylish.",
     style:
       "bg-teal-500 hover:bg-teal-600 text-white hover:w-[80px] hover:h-[80px] transition-all duration-500",
+    link:"/icon/whyus/idea.png"
   },
   {
     id: 3,
@@ -236,6 +238,7 @@ export const whyUsList = [
       "We offer premium products at competitive prices, making quality accessible.",
     style:
       "bg-yellow-500 hover:bg-yellow-600 text-white hover:w-[80px] hover:h-[80px] transition-all duration-500",
+    link:"/icon/whyus/pricing.png"
   },
   {
     id: 4,
@@ -243,6 +246,7 @@ export const whyUsList = [
     description:
       "We prioritize customer satisfaction with excellent service and support.",
     style: `bg-orange-500 hover:bg-orange-600 text-white hover:w-[80px] hover:h-[80px] transition-all duration-500`,
+    link:"/icon/whyus/satisfaction.png"
   },
   {
     id: 5,
@@ -251,6 +255,7 @@ export const whyUsList = [
       "We use eco-friendly materials and practices to reduce our environmental impact.",
     style:
       "bg-slate-500 hover:bg-slate-600 text-white hover:w-[80px] hover:h-[80px] transition-all duration-500",
+      link:"/icon/whyus/sustainable.png"
   },
   {
     id: 6,
@@ -259,6 +264,7 @@ export const whyUsList = [
       "Our products are trusted and recommended by industry professionals worldwide.",
     style:
       "bg-red-400 hover:bg-red-600 text-white hover:w-[80px] hover:h-[80px] transition-all duration-500",
+    link:"/icon/whyus/verified.png"
   },
 ];
 
