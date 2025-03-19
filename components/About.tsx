@@ -92,20 +92,22 @@ export const About = () => {
         </div>
       </div>
 
-      <div className="absolute top-0 right-0 h-full z-20">
+      <div className="absolute top-0 right-0 h-full z-40">
         <div className="relative h-full flex justify-center items-center">
-          <div className="sticky bottom-6 right-6 rounded-full bg-slate-400 flex self-end m-3 p-3 z-30">
-            <div className="w-[60px] h-[60px] rounded-full overflow-hidden flex items-center justify-center relative">
+          <div className="sticky bottom-6 right-6 rounded-full bg-[rgb(255,255,255)] flex self-end m-3 p-3 z-30 space-x-3 shadow-xl hover:scale-110 transition-transform duration-300">
+            <div className="w-[50px] h-[50px] rounded-full overflow-hidden flex items-center justify-center relative 
+                            max-sm:w-[30px] max-sm:h-[30px] max-md:w-[40px] max-md:h-[40px] border border-black">
               <Image 
                 alt="Centered Image"
-                src="/icon/right-car.jpg"
-                width={1920}
-                height={1080}
+                src="/icon/phone.png"
+                // width={1920}
+                // height={1080}
+                fill
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="flex flex-col">
-              <h1 className="font-semibold">Sundanese Contact</h1>
+            <div className="flex flex-col justify-center max-sm:text-[10px] max-md:text-[10px] text-[15px] text-black">
+              <h1 className="font-semibold">Our Contact</h1>
               <p>089929293912</p>
             </div>
           </div>

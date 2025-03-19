@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Element } from "react-scroll";
 import { listCars, whyUsList } from "@/utils";
 import Image from "next/image";
@@ -10,6 +10,8 @@ import clsx from "clsx";
 export const Products = () => {
   const isCarsEmpty =
     !Array.isArray(listCars) || listCars.length < 1 || !listCars;
+
+  const [isHovered, setIsHovered] = useState(false);
 
   const WhyComponent = ({
     style,
@@ -163,8 +165,8 @@ export const Products = () => {
       {/* </div> */}
 
       {/* Additional Product List Without Overflow Hidden */}
-      <div className="relative bg-[url('/icon/mid-car.jpg')] bg-center bg-no-repeat bg-cover">
-        <div className="container mx-auto p-8 relative z-10">
+      <div className="relative  flex flex-wrap container ">
+        {/* <div className="container mx-auto p-8 relative z-10">
           <h3 className="text-center text-[36px] max-sm:text-[30px] font-semibold text-white mb-8 tracking-wide">
             Our Popular Cars
           </h3>
@@ -173,8 +175,28 @@ export const Products = () => {
               <ProductComponent elm={elm} key={elm.merk} style="bg-white max-sm:w-[300px]" font="text-black "/>
             ))}
           </div>
+        </div> */}
+
+        <div className="relative w-full md:w-[50%]" onMouseEnter={ ()=>setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)}>
+          <div className="rounded-xl aspect-[4/3] bg-cover bg-center text-white relative w-full">
+            <Image src="/icon/product/roll-royce.jpg" alt="roll royce Yellow" fill className="object-cover absolute top-0 left-0 rounded-xl"></Image>
+
+            <div>
+            
+            </div>
+          </div>
+          <div className={clsx("absolute top-0 right-0 rounded-bl-3xl bg-[rgb(14,15,17)] w-[200px] aspect-[-1/1] transition-all duration-300",isHovered && "h-[50px]")}>
+            <svg id="Layer_1" className={clsx("w-10 h-10 | text-[rgb(14,15,17)] fill-current absolute -top-0.5 left-px transform-gpu -translate-x-full dark:text-grayDark-600",isHovered && "lg:w-10 lg:h-10")} version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 100 100" xmlSpace="preserve"><path d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"></path></svg>
+            <svg id="Layer_1" className="w-10 h-10 | lg:w-10 lg:h-10 text-[rgb(14,15,17)] fill-current absolute bottom-px -right-0.5 transform-gpu translate-y-full dark:text-grayDark-600" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 100 100" xmlSpace="preserve"><path d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"></path></svg>
+          </div>
         </div>
-        <div className="absolute top-0 left-0 h-[100%] w-full bg-[rgba(53,53,53,0.8)] bg-gradient-to-b from-[rgba(29,30,34,0.7)] to-transparent"></div>
+        <div className="relative w-full md:w-[50%]">
+          <div className="rounded-xl aspect-[4/3] bg-cover bg-center text-white relative w-full ">
+          <Image src="/icon/product/roll-royce-ceper.jpg" alt="roll royce Yellow" fill className="object-cover absolute top-0 left-0"></Image>
+          </div>
+        </div>
+        
+        {/* <div className="absolute top-0 left-0 h-[100%] w-full bg-[rgba(53,53,53,0.8)] bg-gradient-to-b from-[rgba(29,30,34,0.7)] to-transparent"></div> */}
       </div>
 
       {/* <div className="relative w-[500px] h-[200px] 

@@ -36,27 +36,43 @@
 export default function Home() {
 
   return (
-<div className="w-full min-h-screen bg-gray-100 p-10">
-  {/* Sticky Parent */}
-  <div className="relative bg-white w-[80%] h-[600px] mx-auto p-6 shadow-lg ">
-    <h1 className="text-2xl font-bold">This is the first section</h1>
-    <p className="mb-6">Scroll inside this section. The "Copy" & "Edit" buttons stay at the bottom.</p>
+    <div className="h-full w-full">
 
-    
+      {/* HOVER ITEM */}
+      {/* <div className="flex justify-center items-center text-center">
+        <div className="w-[100px] h-[100px] bg-slate-400
+          before:bg-purple-500 before:h-[165px] before:w-[185px] before:top-[100%] before:left-[100%] before:transition-all before:duration-[0.3s] before:content-['']
+          hover:before:top-[-30px] hover:before:left-[-30px]
 
-    {/* Sticky Buttons */}
-    <div className="sticky top-0 left-0 flex justify-start bg-gray-900 text-white p-4">
-      <button className="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">Copy</button>
-      <button className="bg-green-500 px-4 py-2 rounded hover:bg-green-600">Edit</button>
+          ">Hover Me</div>
+      </div> */}
+
+      {/* HOVER ITEM */}
+      <div className="flex justify-center items-center text-center ">
+        <div className="relative">
+          <p className=" cursor-pointer
+        after:content[''] after:h-[2px] after:absolute after:left-0 after:bottom-0 after:w-full after:bg-green-400 after:transition-transform after:duration-300
+        after:scale-[0] hover:after:scale-[1]">
+            Hover Me
+          </p>
+        </div>
+      </div>
+
+
+      {/* CHANGE ELEMENT */}
+
+      <div className="animate-[flip_2s_ease-in-out_infinite] bg-white w-[100px] infiin">sss</div>
+
+
+      <button type="button" className="bg-indigo-500 ..." disabled>
+        <svg className="mr-3 size-5  ..." viewBox="0 0 24 24">
+          
+        </svg>
+        Processing…
+      </button>
     </div>
-  </div>
 
-  {/* Second Section */}
-  <div className="w-[80%] min-h-[600px] bg-red-500 mx-auto p-6 mt-10">
-    <h1 className="text-2xl font-bold">Second Section</h1>
-    <p>When you reach here, the buttons should no longer be visible.</p>
-  </div>
-</div>
+
 
 
 
