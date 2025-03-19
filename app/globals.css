@@ -15,6 +15,10 @@
   }
 }
 
+html {
+  scroll-snap-type: x mandatory;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -52,16 +56,16 @@ body {
   @apply fill-[#2EF2FF];
 }
 
-.infiin{
- animation: spin 1s infinite; 
- background: red;
+.infiin {
+  animation: spin 1s infinite;
+  background: red;
 }
 
-@keyframes flip{
-  from{
-    transform:perspective(100px);
+@keyframes flip {
+  from {
+    transform: perspective(100px);
   }
-  to{
+  to {
     transform: perspective(100px) rotateX((360deg));
   }
 }

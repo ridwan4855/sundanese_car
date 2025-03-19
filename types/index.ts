@@ -11,7 +11,13 @@ export interface NavCompProps {
   isScroll?: boolean;
 }
 
-export interface Login{
-  username:string;
-  password:string;
+export interface Login {
+  username: string;
+  password: string;
+}
+
+export interface CardProductProps {
+  source: string;
+  typeCard: string[];
+  style?: string;
 }
