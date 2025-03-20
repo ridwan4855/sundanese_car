@@ -7,6 +7,7 @@ import Image from "next/image";
 import { play_fair } from "@/public/font";
 import clsx from "clsx";
 import { CardProduct } from "./Product/CardProduct";
+import { Header } from "./Product/Header";
 
 export const Products = () => {
   const isCarsEmpty =
@@ -178,67 +179,52 @@ export const Products = () => {
       {/* </div> */}
 
       {/* Additional Product List Without Overflow Hidden */}
-      <div className="relative  flex flex-wrap container lg:space-x-14 md:space-x-8 max-sm:space-y-10">
-        <div className="relative w-[47%]">
-          <div className="hidden">
-            <ul>
-              <li>Out Work</li>
-            </ul>
-            <p className="">Take a Look At Our Project</p>
-          </div>
+      <div className="relative  flex flex-wrap container | lg:space-x-14 | md:space-x-8 | max-sm:space-y-10 | sm:space-x-6 mb-24">
+        <div className="relative w-[47%] | max-sm:w-full">
+          <Header headProps={{topPart:"Our Work",botPart:"Take a Look At Our Project",styleTop:"hidden max-sm:block justify-center",styleBot:"text-5xl max-w-sm | xl:max-w-md | 4xl:max-w-lg"}}/>
           <CardProduct
             carProduct={{
               source: "/icon/product/roll-royce.jpg",
               typeCard: ["Awesome", "Elegant", "Branding"],
+              style:"",
+              merk:"Red Roll Royce",
+              detail:"Red Roll Royce Giving You Brave Vibes"
             }}
           />
-        </div>
-        <div className="relative w-[47%]">
-          <div className="space-y-3 mt-10 mb-10 flex  justify-center ">
-            <div className="flex flex-col justify-center">
-              <div className="flex items-center space-x-2">
-                <div className="rounded-full w-1.5 h-1.5 bg-white"></div>
-                <div className="">Our Work</div>
-              </div>
 
-              <p className="text-5xl max-w-sm | xl:max-w-md | 4xl:max-w-lg">
-                Take a Look At Our Project
-              </p>
-            </div>
-          </div>
+          <CardProduct
+            carProduct={{
+              source: "/icon/product/tanduk.jpg",
+              typeCard: ["Exclusive"],
+              merk:"Roll Royce Logo",
+              detail:"Known as The Exclusive One"
+            }}
+          />
+          <Header headProps={{topPart:"Our Work",botPart:"We Do The Best On Every Detail",styleTop:"block max-sm:hidden justify-center mt-28",styleBot:"text-5xl max-w-sm | xl:max-w-md | 4xl:max-w-lg"}}/>
+        </div>
+        <div className="relative w-[47%] | max-sm:w-full">
+          <Header headProps={{topPart:"Our Work",botPart:"Take a Look At Our Project",styleTop:"block max-sm:hidden justify-center",styleBot:"text-5xl max-w-sm | xl:max-w-md | 4xl:max-w-lg"}}/>
           <CardProduct
             carProduct={{
               source: "/icon/product/roll-royce-ceper.jpg",
               typeCard: ["Elegant", "Branding"],
+              merk:"Old Roll Royce",
+              detail:"The Old Roll Royce is Still One Of The Best"
             }}
           />
+
+          <CardProduct
+            carProduct={{
+              source: "/icon/product/roll-royce-white.jpg",
+              typeCard: ["Elegant", "Clean Look"],
+              merk:"Roll Royce Bodas",
+              detail:"White Roll Royce clean Look"
+            }}
+          />
+
+          <Header headProps={{topPart:"Our Work",botPart:"We Do The Best On Every Detail",styleTop:"hidden max-sm:block justify-center",styleBot:"text-5xl max-w-sm | xl:max-w-md | 4xl:max-w-lg"}}/>
         </div>
-        {/* <div className="absolute top-0 left-0 h-[100%] w-full bg-[rgba(53,53,53,0.8)] bg-gradient-to-b from-[rgba(29,30,34,0.7)] to-transparent"></div> */}
       </div>
-
-      {/* <div className="relative w-[500px] h-[200px] 
-      
-      [clip-path:polygon(0%_0%,100%_0%,100%_70%,59%_70%,59%_100%,0%_100%)]
-      bg-red-600
-      rounded-3xl
-      "></div> */}
-
-      {/* Why Choose Section */}
-      {/* <div className="container mx-auto mt-16 p-8 bg-gradient-to-r from-white via-gray-100 to-gray-200 rounded-3xl shadow-lg">
-        <h3 className="text-center text-[36px] font-semibold text-gray-800 mb-8 tracking-wide">
-          Why Choose Our Products?
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
-          {whyUsList.map((obj) => (
-            <WhyComponent
-              key={obj.id}
-              style={obj.style}
-              type={obj.title}
-              description={obj.description}
-            />
-          ))}
-        </div>
-      </div> */}
 
       <div className="mx-auto bg-gradient-to-r from-white via-gray-100 to-gray-200 shadow-lg">
         {/* <h3 className="text-center text-[36px] font-semibold text-gray-800 mb-8 tracking-wide">

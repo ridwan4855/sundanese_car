@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import clsx from "clsx";
 import { CardProductProps } from "@/types";
+import { Header } from "./Header";
 
 export interface Product {
   carProduct: CardProductProps;
@@ -13,7 +14,7 @@ export const CardProduct = ({ carProduct }: Product) => {
   return (
     <div
       className={clsx(
-        "relative w-full md:w-full overflow-hidden",
+        "relative w-full md:w-full overflow-hidden mt-28 max-sm:mt-8",
         carProduct.style
       )}
       onMouseEnter={() => setIsHovered(true)}
@@ -25,7 +26,9 @@ export const CardProduct = ({ carProduct }: Product) => {
           alt="roll royce Yellow"
           fill
           className={clsx(
-            "object-cover absolute top-0 left-0 hover:-translate-y-1 transition-transform duration-300"
+            "object-cover absolute top-0 left-0",
+            isHovered && "-translate-y-1 transition-transform duration-300",
+            !isHovered && "translate-y-0 transition-transform duration-300"
           )}
         ></Image>
 
@@ -94,6 +97,8 @@ export const CardProduct = ({ carProduct }: Product) => {
           </div>
         )}
       </div>
+    
+      <Header headProps={{topPart:carProduct.merk, botPart:carProduct.detail, styleTop:'text-md justify-start', styleBot:'text-4xl'}}/>
     </div>
   );
 };

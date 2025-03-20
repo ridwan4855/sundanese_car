@@ -19,6 +19,13 @@ html {
   scroll-snap-type: x mandatory;
 }
 
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: loop 10s linear infinite;
+  width: max-content;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

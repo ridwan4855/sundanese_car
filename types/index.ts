@@ -20,4 +20,14 @@ export interface CardProductProps {
   source: string;
   typeCard: string[];
   style?: string;
+  merk: string;
+  detail: string;
+}
+
+export interface HeadProps{
+  topPart:string;
+  botPart:string;
+  styleElm?:string;
+  styleTop?:string;
+  styleBot?:string;
 }
