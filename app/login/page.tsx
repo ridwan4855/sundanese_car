@@ -14,7 +14,7 @@
 //               user.username = value;
 //               setUserLogin();
 //               setisvalidUsername((prevState)=> !prevState)
-//             }}/> 
+//             }}/>
 //             {isvalidUsername && (
 //               <div className="flex justify-end">
 //                 <p className="text-red-600">Username Wajib Diisi</p>
@@ -31,10 +31,8 @@
 //   );
 // }
 
-
 // import { useState,useEffect } from "react";
 export default function Home() {
-
   return (
     // <div className="h-full w-full">
 
@@ -58,19 +56,16 @@ export default function Home() {
     //     </div>
     //   </div>
 
-
     //   {/* CHANGE ELEMENT */}
 
     //   <div className="animate-[flip_2s_ease-in-out_infinite] bg-white w-[100px] infiin">sss</div>
 
-
     //   <button type="button" className="bg-indigo-500 ..." disabled>
     //     <svg className="mr-3 size-5  ..." viewBox="0 0 24 24">
-          
+
     //     </svg>
     //     Processing…
     //   </button>
-
 
     //   <
     // </div>
@@ -91,16 +86,26 @@ export default function Home() {
     //   </div>
     //   <div className="fade absolute"></div>
     // </div>
-    <div className="overflow-hidden whitespace-nowrap bg-gray-800 text-white py-4">
-      <div className="marquee flex space-x-6">
+    <div className="overflow-hidden whitespace-nowrap bg-gray-800 text-white flex space-x-16">
+      <div className="flex space-x-16 animate-loop">
         {/* <!-- Repeated Content for Seamless Loop --> */}
         <span className="px-4">Item 1</span>
         <span className="px-4">Item 2</span>
         <span className="px-4">Item 3</span>
         <span className="px-4">Item 4</span>
         <span className="px-4">Item 5</span>
-
-        {/* <!-- Duplicate for Seamless Effect --> */}
+      </div>
+      {/* <!-- Duplicate for Seamless Effect --> */}
+      <div className="flex space-x-16 animate-loop">
+        {/* <!-- Repeated Content for Seamless Loop --> */}
+        <span className="px-4">Item 1</span>
+        <span className="px-4">Item 2</span>
+        <span className="px-4">Item 3</span>
+        <span className="px-4">Item 4</span>
+        <span className="px-4">Item 5</span>
+      </div>
+      <div className="flex space-x-16 animate-loop">
+        {/* <!-- Repeated Content for Seamless Loop --> */}
         <span className="px-4">Item 1</span>
         <span className="px-4">Item 2</span>
         <span className="px-4">Item 3</span>
@@ -108,8 +113,5 @@ export default function Home() {
         <span className="px-4">Item 5</span>
       </div>
     </div>
-
-
   );
-
 }

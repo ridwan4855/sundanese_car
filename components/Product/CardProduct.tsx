@@ -14,7 +14,8 @@ export const CardProduct = ({ carProduct }: Product) => {
   return (
     <div
       className={clsx(
-        "relative w-full md:w-full overflow-hidden mt-28 max-sm:mt-8",
+        "relative",
+        "overflow-hidden mt-28 max-sm:mt-8",
         carProduct.style
       )}
       onMouseEnter={() => setIsHovered(true)}
@@ -31,22 +32,22 @@ export const CardProduct = ({ carProduct }: Product) => {
             !isHovered && "translate-y-0 transition-transform duration-300"
           )}
         ></Image>
-
-        <div></div>
       </div>
       <div
         className={clsx(
-          "absolute right-0 rounded-bl-3xl bg-[rgb(14,15,17)] aspect-[-1/1] transition-all duration-300",
+          "absolute right-0 rounded-bl-3xl aspect-[-1/1] transition-all duration-300",
           "flex justify-center items-start",
-          isHovered && "top-0 p-2",
-          !isHovered && "-top-12 p-0"
+          isHovered && "-top-0 p-2",
+          !isHovered && "-top-12 p-0",
+          `bg-[rgb(14,15,17)]`
         )}
       >
         {/* untuk bagian atas */}
         <svg
           id="Layer_1"
           className={clsx(
-            "w-10 h-10 lg:w-10 | lg:h-10 text-[rgb(14,15,17)] fill-current absolute -top-0.5 left-px transform-gpu -translate-x-full dark:text-grayDark-600"
+            "w-10 h-10 lg:w-10 | lg:h-10  fill-current absolute -top-0.5 left-px transform-gpu -translate-x-full dark:text-grayDark-600",
+            `text-[rgb(14,15,17)]`
           )}
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +62,10 @@ export const CardProduct = ({ carProduct }: Product) => {
         {/* untuk bagian samping */}
         <svg
           id="Layer_1"
-          className="w-10 h-10 | lg:w-10 lg:h-10 text-[rgb(14,15,17)] fill-current absolute bottom-px -right-0.5 transform-gpu translate-y-full dark:text-grayDark-600"
+          className={clsx(
+            `text-[rgb(14,15,17)]`,
+            "w-10 h-10 | lg:w-10 lg:h-10 fill-current absolute bottom-px -right-0.5 transform-gpu translate-y-full dark:text-grayDark-600"
+          )}
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
           x="0"
@@ -72,7 +76,7 @@ export const CardProduct = ({ carProduct }: Product) => {
           <path d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"></path>
         </svg>
 
-        {carProduct.typeCard.length > 0 ? (
+        {carProduct.typeCard !== undefined && carProduct.typeCard.length > 0 ? (
           <div className="flex space-x-2 m-1">
             {carProduct.typeCard.map((data, index) => (
               <div
@@ -97,8 +101,15 @@ export const CardProduct = ({ carProduct }: Product) => {
           </div>
         )}
       </div>
-    
-      <Header headProps={{topPart:carProduct.merk, botPart:carProduct.detail, styleTop:'text-md justify-start', styleBot:'text-4xl'}}/>
+
+      <Header
+        headProps={{
+          topPart: carProduct.merk,
+          botPart: carProduct.detail,
+          styleTop: carProduct.styleTop,
+          styleBot: carProduct.styleBot,
+        }}
+      />
     </div>
   );
 };

@@ -15,15 +15,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      animation:{
-        loop:"loop 5s linear infinite",
+      animation: {
+        loop: "loop 5s linear infinite",
       },
-      keyframes:{
-        loop:{
-          from:{transform:"translateX(0)"},
-          to: { transform: "translateX(-50%)" },
-        }
-      }
+      keyframes: {
+        loop: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(calc(-50%))" },
+        },
+      },
     },
   },
   plugins: [
