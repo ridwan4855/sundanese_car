@@ -1,6 +1,5 @@
 import { HeadProps } from "@/types";
 import clsx from "clsx";
-import React, { useState } from "react";
 
 export interface HeaderProps {
   headProps: HeadProps;
