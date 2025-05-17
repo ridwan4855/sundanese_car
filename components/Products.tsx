@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
 import { Element } from "react-scroll";
 import { listCars, whyUsList } from "@/utils";
 import Image from "next/image";
-import { play_fair } from "@/public/font";
 import clsx from "clsx";
 import { CardProduct } from "./Product/CardProduct";
 import { Header } from "./Product/Header";
@@ -13,58 +11,45 @@ export const Products = () => {
   const isCarsEmpty =
     !Array.isArray(listCars) || listCars.length < 1 || !listCars;
 
-  const [isHovered, setIsHovered] = useState(false);
-
   const WhyComponent = ({
-    style,
     type,
     description,
     link,
+    position,
   }: {
-    style: string;
+    style?: string;
     type: string;
     description: string;
     link: string;
+    position: number;
   }) => (
-    // <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:shadow-xl transition-shadow">
-    //   <div
-    //     className={`w-16 h-16  flex items-center justify-center rounded-full mb-4 ${style}`}
-    //   >
-    //     <i className="fas fa-tachometer-alt text-2xl"></i>
-    //   </div>
-    //   <h4 className="text-lg font-semibold text-gray-800 mb-2">
-    //     {type}
-    //     {/* High Performance */}
-    //   </h4>
-    //   <p className="text-gray-600 text-sm text-center">
-    //     {description}
-    //     {/* Our cars are built for speed, reliability, and smooth rides. */}
-    //   </p>
-    // </div>
-
-    <div className="relative bg-[rgb(50,53,58)] shadow-2xl p-6 flex flex-col  hover:shadow-2xl hover:shadow-white transition-shadow h-[300px] z-10  rounded-xl">
+    <div
+      className="relative bg-[rgba(255,255,255,0)]  p-6 flex flex-col  h-[300px] z-10  rounded-3xl item transition-all duration-[0.5s]"
+      style={{ "--position": position } as React.CSSProperties}
+    >
       <div className="relative z-10">
-        <h4 className="text-2xl text-white mb-2 font-bold">
+        {/* <h4 className="text-2xl text-white mb-2 font-bold">
           {type}
-          {/* High Performance */}
-        </h4>
+        </h4> */}
 
         <div className="w-full flex justify-center">
           <div className="relative w-[150px] h-[150px]">
             <Image
               alt={type}
-              // width={130}
-              // height={130}
               src={link}
               fill
-              className="object-cover"
+              className="object-cover border border-white bg-white rounded-3xl hover:shadow-white"
             />
           </div>
         </div>
+        <h4 className="text-2xl text-white mb-2 font-bold text-center">
+          {type}
+          {/* High Performance */}
+        </h4>
 
         <p className="text-white text-sm text-center">
-          {description}
-          {/* Our cars are built for speed, reliability, and smooth rides. */}
+          {description ||
+            "Our cars are built for speed, reliability, and smooth rides."}
         </p>
       </div>
     </div>
@@ -72,8 +57,6 @@ export const Products = () => {
 
   return (
     <Element name="Our Product" className="relative w-full   pb-[80px] ">
-      {/* Primary Product List Section */}
-      {/* <div className="w-full bg-[rgb(29,30,34)]"> */}
       <div className="container flex items-center mx-auto max-sm:flex-col ">
         <Header
           headProps={{
@@ -99,12 +82,6 @@ export const Products = () => {
                 )}
               >
                 {listCars?.slice(0, 5).map((elm, index) => (
-                  // <ProductComponent
-                  //   elm={elm}
-                  //   key={elm.merk}
-                  //   style="bg-[rgb(14,15,17)] w-[300px] max-sm:w-[250px] border border-white"
-                  //   font="text-white"
-                  // />
                   <CardProduct
                     key={index}
                     carProduct={{
@@ -187,7 +164,7 @@ export const Products = () => {
               typeCard: ["Elegant", "Branding"],
               merk: "Old Roll Royce",
               style: "w-full md:w-full",
-              detail: "The Old Roll Royce is Still One Of The Best mt-5 mb-10",
+              detail: "The Old Roll Royce is Still One Of The Best",
               styleTop: "text-md justify-start mt-10 mb-10",
               styleBot: "text-4xl",
             }}
@@ -207,23 +184,29 @@ export const Products = () => {
         </div>
       </div>
 
-      <div className="border-t-2 pt-2 w-full "></div>
-      {/* <div className="mx-auto bg-gradient-to-r from-white via-gray-100 to-gray-200 shadow-lg"> */}
-      {/* <h3 className="text-center text-[36px] font-semibold text-gray-800 mb-8 tracking-wide">
-          Why Choose Our Products?
-        </h3> */}
-      <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto space-x-2 space-y-2">
-        {whyUsList.map((obj) => (
-          <WhyComponent
-            key={obj.id}
-            style={obj.style}
-            type={obj.title}
-            description={obj.description}
-            link={obj.link}
-          />
-        ))}
+      <div
+        className="slider w-full overflow-hidden"
+        style={
+          {
+            "--width": "400px",
+            "--height": "300px",
+            "--quantity": whyUsList.length,
+          } as React.CSSProperties
+        }
+      >
+        <div className="flex list relative">
+          {whyUsList.map((obj, index) => (
+            <WhyComponent
+              key={obj.id}
+              style={obj.style}
+              type={obj.title}
+              description={obj.description}
+              link={obj.link}
+              position={index + 1}
+            />
+          ))}
+        </div>
       </div>
-      {/* </div> */}
     </Element>
   );
 };

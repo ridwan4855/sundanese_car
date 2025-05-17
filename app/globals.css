@@ -19,11 +19,45 @@ html {
   scroll-snap-type: x mandatory;
 }
 
-.marquee {
-  display: flex;
-  white-space: nowrap;
-  animation: loop 10s linear infinite;
-  width: max-content;
+.slider {
+  height: var(--height);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000000 15% 85%,
+    transparent
+  );
+}
+
+.slider .list {
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+}
+
+.slider:hover .item {
+  animation-play-state: paused !important;
+}
+
+.slider .list .item {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
+}
+
+.slider .list .item p {
+  width: 100%;
+}
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
 }
 
 body {

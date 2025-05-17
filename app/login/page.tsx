@@ -86,31 +86,122 @@ export default function Home() {
     //   </div>
     //   <div className="fade absolute"></div>
     // </div>
-    <div className="overflow-hidden whitespace-nowrap bg-gray-800 text-white flex space-x-16">
-      <div className="flex space-x-16 animate-loop">
+    <div
+      className="slider w-full border border-red-600 overflow-hidden"
+      style={
+        {
+          "--width": "800px",
+          "--height": "100px",
+          "--quantity": 4,
+        } as React.CSSProperties
+      }
+    >
+      <div className="flex list relative">
         {/* <!-- Repeated Content for Seamless Loop --> */}
-        <span className="px-4">Item 1</span>
-        <span className="px-4">Item 2</span>
-        <span className="px-4">Item 3</span>
-        <span className="px-4">Item 4</span>
-        <span className="px-4">Item 5</span>
-      </div>
-      {/* <!-- Duplicate for Seamless Effect --> */}
-      <div className="flex space-x-16 animate-loop">
-        {/* <!-- Repeated Content for Seamless Loop --> */}
-        <span className="px-4">Item 1</span>
-        <span className="px-4">Item 2</span>
-        <span className="px-4">Item 3</span>
-        <span className="px-4">Item 4</span>
-        <span className="px-4">Item 5</span>
-      </div>
-      <div className="flex space-x-16 animate-loop">
-        {/* <!-- Repeated Content for Seamless Loop --> */}
-        <span className="px-4">Item 1</span>
-        <span className="px-4">Item 2</span>
-        <span className="px-4">Item 3</span>
-        <span className="px-4">Item 4</span>
-        <span className="px-4">Item 5</span>
+        <span
+          className="item"
+          style={{ "--position": 1 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            {`Let's Be Smart With Choose Our Product`}
+          </p>
+        </span>
+        <span
+          className="item"
+          style={{ "--position": 2 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            {`Let's Be Smart With Choose Our Product`}
+          </p>
+        </span>
+        <span
+          className="item"
+          style={{ "--position": 3 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            {`Let's Be Smart With Choose Our Product`}
+          </p>
+        </span>
+        <span
+          className="item"
+          style={{ "--position": 4 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            {`Let's Be Smart With Choose Our Product`}
+          </p>
+        </span>
+        <span
+          className="item"
+          style={{ "--position": 5 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            {`Let's Be Smart With Choose Our Product`}
+          </p>
+        </span>
+        <span
+          className="item"
+          style={{ "--position": 6 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            {`Let's Be Smart With Choose Our Product`}
+          </p>
+        </span>
+        <span
+          className="item"
+          style={{ "--position": 7 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            {`Let's Be Smart With Choose Our Product`}
+          </p>
+        </span>
+        <span
+          className="item"
+          style={{ "--position": 8 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            {`Let's Be Smart With Choose Our Product`}
+          </p>
+        </span>
+        <span
+          className="item"
+          style={{ "--position": 9 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            {`Let's Be Smart With Choose Our Product`}
+          </p>
+        </span>
+        <span
+          className="item"
+          style={{ "--position": 10 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            {`Let's Be Smart With Choose Our Product`}
+          </p>
+        </span>
+        {/* <span
+          className="item"
+          style={{ "--position": 3 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            Let's Be Smart With Choose Our Product
+          </p>
+        </span>
+        <span
+          className="item"
+          style={{ "--position": 4 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            Let's Be Smart With Choose Our Product
+          </p>
+        </span>
+        <span
+          className="item"
+          style={{ "--position": 5 } as React.CSSProperties}
+        >
+          <p className="text-4xl font-semibold">
+            Let's Be Smart With Choose Our Product
+          </p>
+        </span> */}
       </div>
     </div>
   );
